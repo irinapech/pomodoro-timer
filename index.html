@@ -6,27 +6,25 @@
     <meta name="viewport" content="width=device-width" initial-scale=1.0">
     <title>Pomodoro timer</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body onload="countdown();">
-    <button>UPDATE</button>
+<body>
+    <button class="update-button">UPDATE</button>
+    
+    <div class="timer"></div>
+    <span class="timer__part timer__part--minutes">00</span>
+    <span class="timer__part">:</span>
+    <span class="timer__part timer__part--seconds">00</span>
+    <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+        <span class="material-icons">play_arrow</span>
+    </button>
+    <button type="button" class="timer__btn timer__btn--reset">
+        <span class="material-icons">timer</span>
+    </button>
 
-    <canvas>
-        <div style="display: flex; width:80%;
-                justify-content:center; padding-top: 0%;">
-        Time Left ::
-    </div>
-    <div style="display: flex; width:80%;
-                justify-content:center; padding-top: 0%;">
-        <input id="minutes" type="text" style="width: 2%; border: none; font-size: 16px;
-                      font-weight: bold; color: black;">
-        <font size="5">
-            :
-        </font>
-        <input id="seconds" type="text" style="width: 2%; border: none; font-size: 16px;
-                      font-weight: bold; color: black;">
-    </div>
-    </canvas>
+    <canvas></canvas>
+
     <script src="code.js"></script>
 
 </body>
