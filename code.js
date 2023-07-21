@@ -26,9 +26,51 @@ function draw() {
                 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
                 ctx.fill();
             }
-            
         }
     }
 }
 
+let minutes = .1;
+let seconds = minutes * 60;
+function countdown() {
+    setTimeout('Decrement()', 60);
+}
+
+function Decrement() {
+    if (document.getElementById) {
+        minutes = document.getElementById("minutes");
+        seconds = document.getElementById("seconds");
+        if (seconds < 59) {
+            seconds.value = seconds;
+        }
+        else {
+            minutes.value = getminutes();
+            seconds.value = getseconds();
+        }
+        if (minutes < 1) {
+            minutes.style.color = "red";
+            seconds.style.color = "red";
+        }
+        if (minutes < 0) {
+            alert('time up');
+            minutes.value = 0;
+            seconds.value = 0;
+        }
+        else {
+            seconds--;
+            setTimeout('Decrement()', 1000);
+        }
+    }
+}
+
+function getminutes() {
+    minutes = Math.floor(seconds / 60);
+    return minutes;
+}
+
+function getseconds() {
+    return seconds - Math.round(minutes * 60);
+}
+
 btn.addEventListener('click', draw);
+btn.addEventListener('click', countdown);

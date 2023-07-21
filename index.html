@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width" initial-scale=1.0">
-        <title>Pomodoro timer</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <button>UPDATE</button>
 
-        <canvas></canvas>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0">
+    <title>Pomodoro timer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-        <script src="code.js"></script> 
+<body onload="countdown();">
+    <button>UPDATE</button>
 
-    </body>
+    <canvas>
+        <div style="display: flex; width:80%;
+                justify-content:center; padding-top: 0%;">
+        Time Left ::
+    </div>
+    <div style="display: flex; width:80%;
+                justify-content:center; padding-top: 0%;">
+        <input id="minutes" type="text" style="width: 2%; border: none; font-size: 16px;
+                      font-weight: bold; color: black;">
+        <font size="5">
+            :
+        </font>
+        <input id="seconds" type="text" style="width: 2%; border: none; font-size: 16px;
+                      font-weight: bold; color: black;">
+    </div>
+    </canvas>
+    <script src="code.js"></script>
+
+</body>
+
 </html>
