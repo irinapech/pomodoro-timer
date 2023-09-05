@@ -31,3 +31,23 @@ function draw() {
 }
 
 btn.addEventListener('click', draw);
+
+setTimeout(function(){
+    console.log("Hello World!");
+}, 2000);
+
+console.log("setTimeout example");
+
+function myFunction()
+{
+    let text;
+    let person = prompt("Enter your name: ", "Harry Potter");
+    if (person == null || person == ""){
+        text = "User cancelled the prompt";
+    }
+    else
+    {
+        text = "Hello " + person + "! How are you doing today?";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
