@@ -32,16 +32,10 @@ function draw() {
 
 btn.addEventListener('click', draw);
 
-setTimeout(function(){
-    console.log("Hello World!");
-}, 2000);
-
-console.log("setTimeout example");
-
-function myFunction()
+function greet()
 {
     let text;
-    let person = prompt("Enter your name: ", "Harry Potter");
+    let person = prompt("Enter your name: ", "Tom");
     if (person == null || person == ""){
         text = "User cancelled the prompt";
     }
